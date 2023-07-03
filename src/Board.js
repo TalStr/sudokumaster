@@ -1,16 +1,15 @@
 import BoardSquare from './BoardSquare';
+
 const Board = () => {
-    const squares = Array(9).fill(null); // create an array of length 9
+    const squares = Array(9).fill(null); 
 
     return ( 
-        <div className="board">
-            {squares.map((value, i) => (
-                <div key={i} className="board-row">
-                    {squares.map((value, j) => <BoardSquare key={i * 9 + j} />)}
-                </div>
-            ))}
+        <div className="board" style={{display: 'flex', flexWrap: 'wrap', width: '270px'}}>
+            {squares.map((value, i) =>
+                squares.map((value, j) => <BoardSquare key={i * 9 + j} />)
+            )}
         </div>
     );
 }
- 
+
 export default Board;
