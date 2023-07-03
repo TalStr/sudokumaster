@@ -1,6 +1,6 @@
 import Navbar from './Navbar';
 import Home from './Home';
-import BoardSquare from './BoardSquare';
+import Board from './Board';
 
 function App() {
   return (
@@ -8,7 +8,7 @@ function App() {
       <Navbar />
       <div className="content">
         <Home />
-        <BoardSquare/>
+        <Board/>
       </div>
     </div>
   );
