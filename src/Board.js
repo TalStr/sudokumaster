@@ -5,14 +5,109 @@ const Board = () => {
     const squares = Array(9).fill(null); 
 
     return (
-        <div className='sudoku'>
-            {squares.map((_, i) => (
-                <div key={i} className="parentCube">
-                    {squares.map((_, j) => <BoardSquare key={i * 9 + j} />)}
-                </div>
-            ))}
-        </div>
-    );
+<table id="board">
+	<tbody>
+		<tr>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+		</tr>
+		<tr>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+		</tr>
+		<tr>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+		</tr>
+		<tr>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+		</tr>
+		<tr>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+		</tr>
+		<tr>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+		</tr>
+		<tr>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+		</tr>
+		<tr>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+		</tr>
+		<tr>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+			<td><input type="text" /></td>
+		</tr>
+	</tbody>
+</table>    );
 }
 
 export default Board;
