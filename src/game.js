@@ -18,10 +18,12 @@ function solve(grid) {
                     if(isValidPlace(grid, row, col, guess)) {
                         grid[row][col] = guess;
                         if(solve(grid)) {
-                            
+                            return true;
                         }
+                        grid[row][col] = 0;
                     }
                 }
+                return false;
             }
         }
     }
