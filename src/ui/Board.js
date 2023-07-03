@@ -1,5 +1,5 @@
 import React from 'react';
-import BoardSquare from './BoardSquare'; 
+import BoardSquare from '../BoardSquare'; 
 
 const Board = () => {
     const squares = Array(9).fill(null); 
