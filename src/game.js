@@ -10,6 +10,15 @@ let board = [
     [0,0,0,0,0,0,0,0,0]
 ];
 
+function isValidPlace(grid, row, col, number) {
+    for(let i = 0; i < 9; i++) {
+        if(grid[i][col] === number) {
+            return false;
+        }
+    }
+    return true;
+}
+
 function solve(grid) {
     for (let row = 0; row < 9; row++) {
         for (let col = 0; col < 9; col++) {
@@ -29,3 +38,6 @@ function solve(grid) {
     }
     return true
 }
+
+solve(board);
+console.log(board);
