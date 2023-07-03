@@ -11,7 +11,7 @@ function getGrid() {
 }
 
 function Sudoku() {
-    const [grid, setGrid] = useState(getGrid)
+    const [grid, setGrid] = useState(getGrid);
     return (
         <div className="Sudoku">
             <Board puzzle={puzzle} grid={grid}/>
@@ -19,3 +19,4 @@ function Sudoku() {
         </div>
     );
 }
+export default Sudoku
