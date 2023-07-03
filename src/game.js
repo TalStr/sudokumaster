@@ -54,17 +54,29 @@ function solve(grid) {
 }
 
 function createPuzzle(){
-    let puzzle = [];
-    for(let i = 0; i < 9;i++){
-        puzzle[i] = Array(9).fill(0);
-    }
+    let puzzle = getRandomSudoku;
     solve(puzzle);
     for(let i = 0; i < 9; i++) {
-        for(let j = 0; j < 9; i++) {
+        for(let j = 0; j < 9; j++) {
             if(Math.random() > 0.3){
                 puzzle[i][j] = 0;
             }
         }
+    }
+    return puzzle;
+}
+
+function getRandomSudoku(){
+    let puzzle = [];
+    for(let i = 0; i < 9;i++){
+        puzzle[i] = Array(9).fill(0);
+    }
+    for(let i = 0; i < 9; i++) {
+        let number = Math.floor(Math.random() * 8) + 1;
+        while(!isValidPlace(puzzle, 0, i, number)){
+            number = Math.floor(Math.random() * 8) + 1;
+        }
+        puzzle[0][i] = number;
     }
     return puzzle;
 }
