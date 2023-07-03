@@ -58,6 +58,7 @@ function createPuzzle(){
     for(let i = 0; i < 9;i++){
         puzzle[i] = Array(9).fill(0);
     }
+    solve(puzzle);
     for(let i = 0; i < 9; i++) {
         for(let j = 0; j < 9; i++) {
             if(Math.random() > 0.3){
@@ -67,5 +68,4 @@ function createPuzzle(){
     }
     return puzzle;
 }
-solve(board);
-console.log(create);
+console.log(createPuzzle());
