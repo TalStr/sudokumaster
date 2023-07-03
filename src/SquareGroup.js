@@ -6,7 +6,7 @@ const SquareGroup = () => {
         <div className="squaregroup" style={{
             display: 'flex',
             flexWrap: 'wrap',
-            width: '150px',
+            width: '175px',
             border: '3px solid black'
             }}>
             {squares.map((value, i) =>
