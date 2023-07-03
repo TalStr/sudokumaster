@@ -21,6 +21,15 @@ function isValidPlace(grid, row, col, number) {
             return false;
         }
     }
+    let localBoxRow = row - (row % 3);
+    let localBoxCol = col - (col % 3);
+    for(let i = localBoxRow; i < localBoxRow + 3; i++) {
+        for(let j = localBoxCol; j < localBoxCol + 3; j++) {
+            if(grid[row][i] === number) {
+                return false;
+            }
+        }
+    }
     return true;
 }
 
