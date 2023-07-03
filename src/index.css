@@ -37,13 +37,13 @@
   width:297px;
   height:297px;
 }
-  .parentCube {
-    width:99px;
-    height:99px;
-    float:left;
-  }
-    .childCube {
-      width:33px;
-      height:33px;
-      float:left;
-    }
+.parentCube {
+  width:99px;
+  height:99px;
+  float:left;
+}
+.childCube {
+  width:33px;
+  height:33px;
+  float:left;
+}
