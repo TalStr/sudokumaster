@@ -27,4 +27,5 @@ function solve(grid) {
             }
         }
     }
+    return true
 }
