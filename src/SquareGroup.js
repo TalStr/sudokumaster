@@ -1,3 +1,5 @@
+import BoardSquare from "./BoardSquare";
+
 const SquareGroup = () => {
     const squares = Array(3).fill(null); 
     return ( 
