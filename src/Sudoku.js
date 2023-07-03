@@ -1,6 +1,7 @@
 import React, { useState, useRef} from "react";
 import Board from "./ui/Board"
 import Interface from "./ui/Interface"
+import {getRandomSudoku, solve} from './game'
 
 function getGrid() {
     let grid = [];
@@ -12,6 +13,7 @@ function getGrid() {
 
 function Sudoku() {
     const [grid, setGrid] = useState(getGrid);
+    const puzzle = getRandomSudoku();
     return (
         <div className="Sudoku">
             <Board puzzle={puzzle} grid={grid}/>

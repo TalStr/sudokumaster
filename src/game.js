@@ -80,5 +80,3 @@ function getRandomSudoku(){
     }
     return puzzle;
 }
-let puzzle = createPuzzle();
-console.log(puzzle);
