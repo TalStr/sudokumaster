@@ -60,10 +60,12 @@ function createPuzzle(){
     }
     for(let i = 0; i < 9; i++) {
         for(let j = 0; j < 9; i++) {
-            if(Math.random)
+            if(Math.random() > 0.3){
+                puzzle[i][j] = 0;
+            }
         }
     }
     return puzzle;
 }
 solve(board);
-console.log(board);
+console.log(create);
