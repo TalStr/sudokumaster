@@ -4,10 +4,10 @@ const Navbar = () => {
         <h1>The Dojo Blog</h1>
         <div className="links">
           <a href="/">Home</a>
-          <a href="/create" style={{ 
+          <a href="/stats" style={{ 
             backgroundColor: '#f1356d',
             borderRadius: '8px' 
-          }}>New Blog</a>
+          }}>Statistics</a>
         </div>
       </nav>
     );
