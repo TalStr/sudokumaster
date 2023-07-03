@@ -68,4 +68,3 @@ function createPuzzle(){
     }
     return puzzle;
 }
-console.log(createPuzzle());
