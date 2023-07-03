@@ -15,7 +15,12 @@ function solve(grid) {
         for (let col = 0; col < 9; col++) {
             if(grid[row][col] === 0) {
                 for (let guess = 1; guess < 10; guess++) {
-                    
+                    if(isValidPlace(grid, row, col, guess)) {
+                        grid[row][col] = guess;
+                        if(solve(grid)) {
+                            
+                        }
+                    }
                 }
             }
         }
