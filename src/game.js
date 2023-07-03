@@ -33,7 +33,7 @@ function isValidPlace(grid, row, col, number) {
     return true;
 }
 
-function solve(grid) {
+export function solve(grid) {
     for (let row = 0; row < 9; row++) {
         for (let col = 0; col < 9; col++) {
             if(grid[row][col] === 0) {
@@ -66,7 +66,7 @@ function createPuzzle(){
     return puzzle;
 }
 
-function getRandomSudoku(){
+export function getRandomSudoku(){
     let puzzle = [];
     for(let i = 0; i < 9;i++){
         puzzle[i] = Array(9).fill(0);
