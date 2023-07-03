@@ -25,7 +25,7 @@ function isValidPlace(grid, row, col, number) {
     let localBoxCol = col - (col % 3);
     for(let i = localBoxRow; i < localBoxRow + 3; i++) {
         for(let j = localBoxCol; j < localBoxCol + 3; j++) {
-            if(grid[row][i] === number) {
+            if(grid[i][j] === number) {
                 return false;
             }
         }
