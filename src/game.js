@@ -54,7 +54,7 @@ function solve(grid) {
 }
 
 function createPuzzle(){
-    let puzzle = getRandomSudoku;
+    let puzzle = getRandomSudoku();
     solve(puzzle);
     for(let i = 0; i < 9; i++) {
         for(let j = 0; j < 9; j++) {
