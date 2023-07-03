@@ -1,7 +1,7 @@
 import BoardSquare from './BoardSquare';
 
 const Board = () => {
-    const squares = Array(8).fill(null); 
+    const squares = Array(9).fill(null); 
 
     return ( 
         <div className="board" style={{display: 'flex', flexWrap: 'wrap', width: '450px'}}>
