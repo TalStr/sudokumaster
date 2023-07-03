@@ -3,7 +3,7 @@ const BoardSquare = () => {
         <div className="boardsquare" style={{
             width: "50px",
             height: "50px",
-            border: "1px solid black"
+            border: "1px solid blue"
         }}>
         </div>
      );
