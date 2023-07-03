@@ -13,10 +13,10 @@ function getGrid() {
 
 function Sudoku() {
     const [grid, setGrid] = useState(getGrid);
-    const puzzle = getRandomSudoku();
+    const puzzle = useRef(getRandomSudoku());
     return (
         <div className="Sudoku">
-            <Board puzzle={puzzle} grid={grid}/>
+            <Board puzzle={grid} grid={grid}/>
             <Interface/>
         </div>
     );
