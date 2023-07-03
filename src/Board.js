@@ -6,38 +6,38 @@ const Board = () => {
 
     return (           
           <div id="sudoku">
-            <div class="parentCube">
-              <div class="childCube"></div>
-              <div class="childCube"></div>
-              <div class="childCube"></div>
-              <div class="childCube"></div>
-              <div class="childCube"></div>
-              <div class="childCube"></div>
-              <div class="childCube"></div>
-              <div class="childCube"></div>
-              <div class="childCube"></div>
+            <div ClassName="parentCube">
+              <div ClassName="childCube"></div>
+              <div ClassName="childCube"></div>
+              <div ClassName="childCube"></div>
+              <div ClassName="childCube"></div>
+              <div ClassName="childCube"></div>
+              <div ClassName="childCube"></div>
+              <div ClassName="childCube"></div>
+              <div ClassName="childCube"></div>
+              <div ClassName="childCube"></div>
             </div>
-            <div class="parentCube">
-              <div class="childCube"></div>
-              <div class="childCube"></div>
-              <div class="childCube"></div>
-              <div class="childCube"></div>
-              <div class="childCube"></div>
-              <div class="childCube"></div>
-              <div class="childCube"></div>
-              <div class="childCube"></div>
-              <div class="childCube"></div>
+            <div ClassName="parentCube">
+              <div ClassName="childCube"></div>
+              <div ClassName="childCube"></div>
+              <div ClassName="childCube"></div>
+              <div ClassName="childCube"></div>
+              <div ClassName="childCube"></div>
+              <div ClassName="childCube"></div>
+              <div ClassName="childCube"></div>
+              <div ClassName="childCube"></div>
+              <div ClassName="childCube"></div>
             </div>
-            <div class="parentCube">
-              <div class="childCube"></div>
-              <div class="childCube"></div>
-              <div class="childCube"></div>
-              <div class="childCube"></div>
-              <div class="childCube"></div>
-              <div class="childCube"></div>
-              <div class="childCube"></div>
-              <div class="childCube"></div>
-              <div class="childCube"></div>
+            <div ClassName="parentCube">
+              <div ClassName="childCube"></div>
+              <div ClassName="childCube"></div>
+              <div ClassName="childCube"></div>
+              <div ClassName="childCube"></div>
+              <div ClassName="childCube"></div>
+              <div ClassName="childCube"></div>
+              <div ClassName="childCube"></div>
+              <div ClassName="childCube"></div>
+              <div ClassName="childCube"></div>
             </div>
           </div>
               );
