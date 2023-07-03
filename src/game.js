@@ -71,7 +71,7 @@ function getRandomSudoku(){
     for(let i = 0; i < 9;i++){
         puzzle[i] = Array(9).fill(0);
     }
-    for(let i = 0; i < 9; i++) {
+    for(let i = 0; i < 8; i++) {
         let number = Math.floor(Math.random() * 8) + 1;
         while(!isValidPlace(puzzle, 0, i, number)){
             number = Math.floor(Math.random() * 8) + 1;
