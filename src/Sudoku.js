@@ -1,7 +1,6 @@
 import React, { useState, useRef} from "react";
 import Board from "./ui/Board"
 import Interface from "./ui/Interface"
-import {getRandomSudoku, solve} from './game'
 
 function getGrid() {
     let grid = [];
@@ -34,7 +33,7 @@ function isValidPlace(grid, row, col, number) {
     return true;
 }
 
-export function solve(grid) {
+function solve(grid) {
     for (let row = 0; row < 9; row++) {
         for (let col = 0; col < 9; col++) {
             if(grid[row][col] === 0) {
