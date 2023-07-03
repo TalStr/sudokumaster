@@ -16,6 +16,11 @@ function isValidPlace(grid, row, col, number) {
             return false;
         }
     }
+    for(let i = 0; i < 9; i++) {
+        if(grid[row][i] === number) {
+            return false;
+        }
+    }
     return true;
 }
 
