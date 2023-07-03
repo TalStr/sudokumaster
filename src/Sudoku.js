@@ -3,5 +3,11 @@ import Board from "./ui/Board"
 import Interface from "./ui/Interface"
 
 function Sudoku() {
-    const [grid, setGrid] = 
+    const [grid, setGrid] = useState()
+    return (
+        <div className="Sudoku">
+            <Board puzzle={puzzle} grid={grid}/>
+            <Interface/>
+        </div>
+    )
 }
