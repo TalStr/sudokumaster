@@ -1,8 +1,9 @@
-import Board from './ui/Board';
+import Sudoku from "./Sudoku";
 
 function App() {
   return (
     <div className="App">
+      <Sudoku/>
     </div>
   );
 }
