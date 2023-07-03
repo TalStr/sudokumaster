@@ -9,3 +9,4 @@ const BoardSquare = () => {
      );
 }
  
+export default BoardSquare;

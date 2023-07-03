@@ -1,3 +1,4 @@
+import BoardSquare from './BoardSquare';
 const Board = () => {
     const squares = Array(9).fill(null); // create an array of length 9
 
