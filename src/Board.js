@@ -5,7 +5,7 @@ const Board = () => {
     const squares = Array(3).fill(null); 
 
     return (           
-          <div id="sudoku">
+          <div className='board'>
             <div className="parentCube">
               <div className="childCube"></div>
               <div className="childCube"></div>
