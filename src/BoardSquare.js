@@ -1,7 +1,6 @@
 const BoardSquare = () => {
     return ( 
         <div className="boardsquare">
-            
         </div>
      );
 }
