@@ -127,9 +127,7 @@ function Sudoku() {
             case "reset":
                 setCount(0);
                 setGrid((grid) => {
-                    const newGrid = [...originalPuzzle];
-                    newGrid[selectedTile.row][selectedTile.col] = 0;
-                    return newGrid;  
+                    return originalPuzzle.current;  
                 });  
                 break;
             case "hint":
