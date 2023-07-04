@@ -136,7 +136,7 @@ function Sudoku() {
     return (
         <div className="Sudoku">
             <Counter count={count}/>
-            <Board puzzle={originalPuzzle} grid={grid} onTileClick={handleTileClick}/>
+            <Board puzzle={originalPuzzle.current} grid={grid} onTileClick={handleTileClick}/>
             <Toolbar handleTool={handleTool}/>
             <Interface onButtonClick={handleButtonClick}/>
         </div>
