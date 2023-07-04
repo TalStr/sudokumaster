@@ -91,6 +91,7 @@ function Counter({count}){
 
 function Sudoku() {
     const puzzle = useRef(createPuzzle()); // original puzzle
+    const originalpuzzle
     const [grid, setGrid] = useState(puzzle.current); // current game board
     const [selectedTile, setSelectedTile] = useState({ row: 0, col: 0 });
     const [count, setCount] = useState(0); // Move count state to Sudoku
