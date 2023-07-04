@@ -86,9 +86,10 @@ function Sudoku() {
     const [selectedTile, setSelectedTile] = useState({ row: null, col: null });
 
     const handleButtonClick = (number) => {
-        console.log("Button clicked:", number);
-        console.log("Selected tile:", selectedTile);
-        if(grid[selectedTile.row][selectedTile.col] === 0){
+        if(!isValidPlace(grid, selectedTile.row, selectedTile.col, number)){
+
+        }
+        else if(grid[selectedTile.row][selectedTile.col] === 0){
             setGrid((grid) => {
                 const newGrid = [...grid];
                 newGrid[selectedTile.row][selectedTile.col] = number;
