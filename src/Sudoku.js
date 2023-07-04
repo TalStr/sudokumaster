@@ -112,6 +112,20 @@ function Sudoku() {
         setSelectedTile(tile);
     };
 
+    function handleTool(action) {
+        switch(action) {
+            case "erase":
+                setGrid((grid) => {
+                    const newGrid = [...grid];
+                    newGrid[selectedTile.row][selectedTile.col] = 0;
+                    return newGrid;    
+                });
+            case "reset":
+                console.log("reset");
+            case "hint":
+                console.log("hint");
+        }
+    }
 
     return (
         <div className="Sudoku">

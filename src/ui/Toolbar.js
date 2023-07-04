@@ -5,7 +5,7 @@ import hintImage from '../images/idea.png'
 function Toolbar({ handleTool }){
     return ( 
         <div className="tools">
-            <button className="tool-button" onClick={() => handleTool("restart")}>
+            <button className="tool-button" onClick={() => handleTool("reset")}>
                 <img src={ restartImage } alt="Restart" className="tool-image" />
             </button>
             <button className="tool-button" onClick={() => handleTool("erase")}>
