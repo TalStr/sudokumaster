@@ -2,7 +2,6 @@ import React, { useState, useRef} from "react";
 import Board from "./ui/Board"
 import Interface from "./ui/Interface"
 import './App.css';
-import Counter from "./ui/Counter";
 
 function getGrid() {
     let grid = [];
@@ -94,7 +93,7 @@ function Sudoku() {
 
     const handleButtonClick = (number) => {
         if(!isValidPlace(grid, selectedTile.row, selectedTile.col, number)){
-
+            setCount(count+1);
         }
         else if(grid[selectedTile.row][selectedTile.col] === 0){
             setGrid((grid) => {
