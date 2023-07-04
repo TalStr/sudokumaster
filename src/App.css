@@ -105,6 +105,6 @@
 .interface button:hover {
   background-color: #45a049;
 }
-.mistake-counter {
+.mistake-counter div {
   color: red;
 }
