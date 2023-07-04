@@ -120,10 +120,13 @@ function Sudoku() {
                     newGrid[selectedTile.row][selectedTile.col] = 0;
                     return newGrid;    
                 });
+                break;
             case "reset":
                 console.log("reset");
+                break;
             case "hint":
                 console.log("hint");
+                break;
         }
     }
 
