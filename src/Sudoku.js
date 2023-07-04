@@ -83,14 +83,22 @@ function getRandomSudoku(){
 function Sudoku() {
     const puzzle = useRef(createPuzzle());  // Solved puzzle
     const [grid, setGrid] = useState(puzzle.current);  // Player's current game state
+    const [selectedTile, setSelectedTile] = useState({ row: null, col: null });
 
     const handleButtonClick = (number) => {
-        console.log("Button clicked: " + number);
-    }
+        console.log("Button clicked:", number);
+        console.log("Selected tile:", selectedTile);
+        // Add your logic here
+    };
+
+    const handleTileClick = (tile) => {
+        setSelectedTile(tile);
+    };
+
 
     return (
         <div className="Sudoku">
-            <Board puzzle={puzzle.current} grid={grid}/>
+            <Board puzzle={puzzle.current} grid={grid} onTileClick={handleTileClick}/>
             <Interface onButtonClick={handleButtonClick}/>
         </div>
     );
