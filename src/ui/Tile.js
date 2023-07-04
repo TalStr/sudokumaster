@@ -6,7 +6,7 @@ function Tile({ puzzle, grid }) {
                 <input 
                 className={puzzle[rowIndex][colIndex] !== 0 ?"initial": col !== 0? "tile taken":"tile"}
                 type="text" 
-                value="1" 
+                value={grid[rowIndex][colIndex] !== 0 ? grid[rowIndex][colIndex] : ""}
                 key={rowIndex + " " + colIndex}
                 />
             );
