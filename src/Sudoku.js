@@ -1,6 +1,7 @@
 import React, { useState, useRef} from "react";
 import Board from "./ui/Board"
 import Interface from "./ui/Interface"
+import Tools from "./ui/tools";
 import './App.css';
 
 function getGrid() {
@@ -116,6 +117,7 @@ function Sudoku() {
         <div className="Sudoku">
             <Counter count={count}/>
             <Board puzzle={puzzle.current} grid={grid} onTileClick={handleTileClick}/>
+            <Tools/>
             <Interface onButtonClick={handleButtonClick}/>
         </div>
     );
