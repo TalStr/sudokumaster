@@ -88,7 +88,7 @@ function Counter({count}){
 function Sudoku() {
     const puzzle = useRef(createPuzzle());  // Solved puzzle
     const [grid, setGrid] = useState(puzzle.current);  // Player's current game state
-    const [selectedTile, setSelectedTile] = useState({ row: null, col: null });
+    const [selectedTile, setSelectedTile] = useState({ row: 0, col: 0 });
     const [count, setCount] = useState(0); // Move count state to Sudoku
 
     const handleButtonClick = (number) => {
