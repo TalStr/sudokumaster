@@ -1,9 +1,9 @@
 
 
 function Counter(){
-    l
+    const [count, setCount] = useState(0);
     return (
-        <div className="mistake-counter"></div>
+        <div className="mistake-counter">count</div>
     );
 } 
 export default Counter;
