@@ -81,7 +81,14 @@ function getRandomSudoku(){
 
 function Counter({count}){
     return (
-        <div className="mistake-counter">Mistakes{count}</div>
+        function Counter({count}){
+            return (
+                <div className="mistake-counter">
+                    <div>Mistakes</div>
+                    <div style={{color: 'red'}}>{count}</div>
+                </div>
+            );
+        } 
     );
 } 
 
