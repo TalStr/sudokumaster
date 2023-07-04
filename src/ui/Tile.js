@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 function Tile({ puzzle, grid, onTileClick }) {
     const [selectedTile, setSelectedTile] = useState({ row: null, col: null });
 
