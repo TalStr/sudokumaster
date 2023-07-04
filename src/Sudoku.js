@@ -88,6 +88,11 @@ function Sudoku() {
     const handleButtonClick = (number) => {
         console.log("Button clicked:", number);
         console.log("Selected tile:", selectedTile);
+        setGrid((grid) => {
+            const newGrid = [...grid];
+            newGrid[selectedTile.row][selectedTile.col] = number;
+            return newGrid;
+        });
     };
 
     const handleTileClick = (tile) => {
