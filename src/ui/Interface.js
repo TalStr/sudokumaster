@@ -1,15 +1,11 @@
-const Interface = () => {
+const Interface = ({ onButtonClick }) => {
     return ( 
         <div className="interface">
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
+            {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((number) => (
+                <button key={number} onClick={() => onButtonClick(number)}>
+                    {number}
+                </button>
+            ))}
         </div>
      );
 }
