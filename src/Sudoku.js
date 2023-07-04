@@ -80,6 +80,11 @@ function getRandomSudoku(){
     return puzzle;
 }
 
+function Counter({count}){
+    return (
+        <div className="mistake-counter">{count}</div>
+    );
+} 
 
 function Sudoku() {
     const puzzle = useRef(createPuzzle());  // Solved puzzle
