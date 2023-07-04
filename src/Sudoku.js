@@ -125,7 +125,12 @@ function Sudoku() {
                 }
                 break;
             case "reset":
-                console.log("reset");
+                setCount(0);
+                setGrid((grid) => {
+                    const newGrid = [...originalPuzzle];
+                    newGrid[selectedTile.row][selectedTile.col] = 0;
+                    return newGrid;  
+                });  
                 break;
             case "hint":
                 console.log("hint");
