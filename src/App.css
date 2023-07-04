@@ -44,8 +44,8 @@
   height: 100vh;
 }
 .tile {
-  width: 60px;
-  height: 60px;
+  width: 75px;
+  height: 75px;
   text-align: center;
   font-size: 32px;
   outline: none;
@@ -61,7 +61,7 @@
 }
 .initial {
   width: 75px;
-  height: 60px;
+  height: 75px;
   text-align: center;
   font-size: 32px;
   outline: none;
