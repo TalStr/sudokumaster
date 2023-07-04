@@ -74,3 +74,6 @@
   grid-template-columns: repeat(9, 0fr);
   padding: 20px;
 }
+.selected {
+  background-color: lightblue;
+}
