@@ -115,11 +115,13 @@ function Sudoku() {
     function handleTool(action) {
         switch(action) {
             case "erase":
-                setGrid((grid) => {
+                if(puzzle[selectedTile.row][selectedTile.col] === 0){
+                    setGrid((grid) => {
                     const newGrid = [...grid];
                     newGrid[selectedTile.row][selectedTile.col] = 0;
                     return newGrid;    
-                });
+                    });
+                }
                 break;
             case "reset":
                 console.log("reset");
