@@ -1,16 +1,34 @@
+import React, { useState } from 'react';
 
 function Tile({ puzzle, grid }) {
+    const [selectedTile, setSelectedTile] = useState({ row: null, col: null });
+
+    const handleTileClick = (rowIndex, colIndex) => {
+        setSelectedTile({ row: rowIndex, col: colIndex });
+    }
+
     return grid.map((row, rowIndex) => {
         return row.map((col, colIndex) => {
+            const isSelected = rowIndex === selectedTile.row && colIndex === selectedTile.col;
             return (
                 <div 
-                className={puzzle[rowIndex][colIndex] !== 0 ?"initial": col !== 0? "tile taken":"tile"}
-                key={rowIndex + " " + colIndex}
+                    className={
+                        isSelected 
+                            ? "tile selected" 
+                            : puzzle[rowIndex][colIndex] !== 0 
+                                ? "initial" 
+                                : col !== 0 
+                                    ? "tile taken"
+                                    : "tile"
+                    }
+                    onClick={() => handleTileClick(rowIndex, colIndex)}
+                    key={rowIndex + " " + colIndex}
                 >
-                {grid[rowIndex][colIndex] !== 0 ? grid[rowIndex][colIndex] : ""}
+                    {grid[rowIndex][colIndex] !== 0 ? grid[rowIndex][colIndex] : ""}
                 </div>
             );
         });
     });
 } 
+
 export default Tile;
