@@ -83,8 +83,6 @@ function getRandomSudoku(){
 function Sudoku() {
     const puzzle = useRef(createPuzzle());  // Solved puzzle
     const [grid, setGrid] = useState(puzzle.current);  // Player's current game state
-
-    console.log(puzzle.current);
     return (
         <div className="Sudoku">
             <Board puzzle={puzzle.current} grid={grid}/>
