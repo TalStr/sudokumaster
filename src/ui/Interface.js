@@ -1,6 +1,8 @@
 const Interface = () => {
     return ( 
-        <div className="interface"/>
+        <div className="interface">
+            <button/>
+        </div>
      );
 }
  
