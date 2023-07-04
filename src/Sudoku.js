@@ -91,7 +91,7 @@ function Counter({count}){
 
 function Sudoku() {
     const puzzle = useRef(createPuzzle()); // original puzzle
-    const originalpuzzle
+    const originalPuzzle = useRef([...puzzle.current.map(row => [...row])]);  // Deep copy of original puzzle
     const [grid, setGrid] = useState(puzzle.current); // current game board
     const [selectedTile, setSelectedTile] = useState({ row: 0, col: 0 });
     const [count, setCount] = useState(0); // Move count state to Sudoku
@@ -116,11 +116,13 @@ function Sudoku() {
     function handleTool(action) {
         switch(action) {
             case "erase":
-                setGrid((grid) => {
-                const newGrid = [...grid];
-                newGrid[selectedTile.row][selectedTile.col] = 0;
-                return newGrid;    
-                });
+                if(originalPuzzle[selectedTile.row][selectedTile.col] === 0){
+                    setGrid((grid) => {
+                        const newGrid = [...grid];
+                        newGrid[selectedTile.row][selectedTile.col] = 0;
+                        return newGrid;    
+                    });
+                }
                 break;
             case "reset":
                 console.log("reset");
@@ -134,7 +136,7 @@ function Sudoku() {
     return (
         <div className="Sudoku">
             <Counter count={count}/>
-            <Board puzzle={puzzle.current} grid={grid} onTileClick={handleTileClick}/>
+            <Board puzzle={originalPuzzle} grid={grid} onTileClick={handleTileClick}/>
             <Toolbar handleTool={handleTool}/>
             <Interface onButtonClick={handleButtonClick}/>
         </div>
