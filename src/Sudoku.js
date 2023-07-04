@@ -90,6 +90,7 @@ function Sudoku() {
     const puzzle = useRef(createPuzzle());  // Solved puzzle
     const [grid, setGrid] = useState(puzzle.current);  // Player's current game state
     const [selectedTile, setSelectedTile] = useState({ row: null, col: null });
+    const [count, setCount] = useState(0); // Move count state to Sudoku
 
     const handleButtonClick = (number) => {
         if(!isValidPlace(grid, selectedTile.row, selectedTile.col, number)){
