@@ -78,7 +78,7 @@
 .selected {
   background-color: lightblue;
 }
-.tile, .initial, .taken, .selected {
+.tile, .initial, .taken, .selected, div {
   -webkit-user-select: none; /* Safari 3.1+ */
   -moz-user-select: none; /* Firefox 2+ */
   -ms-user-select: none; /* IE 10+ */
