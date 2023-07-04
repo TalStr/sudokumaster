@@ -82,7 +82,7 @@ function getRandomSudoku(){
 
 function Sudoku() {
     const [grid, setGrid] = useState(getGrid);
-    const puzzle = useRef(getRandomSudoku());
+    const puzzle = useRef(createPuzzle());
     return (
         <div className="Sudoku">
             <Board puzzle={puzzle.current} grid={grid}/>
