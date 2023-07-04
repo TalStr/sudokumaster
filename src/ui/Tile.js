@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
-
-function Tile({ puzzle, grid }) {
+function Tile({ puzzle, grid, onTileClick }) {
     const [selectedTile, setSelectedTile] = useState({ row: null, col: null });
 
     const handleTileClick = (rowIndex, colIndex) => {
         setSelectedTile({ row: rowIndex, col: colIndex });
-    }
+        onTileClick({ row: rowIndex, col: colIndex });
+    };
 
     return grid.map((row, rowIndex) => {
         return row.map((col, colIndex) => {
