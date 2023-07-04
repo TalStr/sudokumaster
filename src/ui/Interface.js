@@ -1,7 +1,7 @@
 const Interface = () => {
     return ( 
         <div className="interface">
-            <button/>
+            <button>aaa</button>
         </div>
      );
 }
