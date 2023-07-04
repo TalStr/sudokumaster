@@ -90,8 +90,8 @@ function Counter({count}){
 } 
 
 function Sudoku() {
-    const puzzle = useRef(createPuzzle());
-    const [grid, setGrid] = useState(puzzle.current);
+    const puzzle = useRef(createPuzzle()); // original puzzle
+    const [grid, setGrid] = useState(puzzle.current); // current game board
     const [selectedTile, setSelectedTile] = useState({ row: 0, col: 0 });
     const [count, setCount] = useState(0); // Move count state to Sudoku
 
@@ -115,13 +115,11 @@ function Sudoku() {
     function handleTool(action) {
         switch(action) {
             case "erase":
-                if(selectedTile.className != "initial"){
-                    setGrid((grid) => {
-                    const newGrid = [...grid];
-                    newGrid[selectedTile.row][selectedTile.col] = 0;
-                    return newGrid;    
-                    });
-                }
+                setGrid((grid) => {
+                const newGrid = [...grid];
+                newGrid[selectedTile.row][selectedTile.col] = 0;
+                return newGrid;    
+                });
                 break;
             case "reset":
                 console.log("reset");
