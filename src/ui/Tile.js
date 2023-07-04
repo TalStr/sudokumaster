@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 function Tile({ puzzle, grid, onTileClick }) {
-    const [selectedTile, setSelectedTile] = useState({ row: null, col: null });
+    const [selectedTile, setSelectedTile] = useState({ row: 0, col: 0 });
 
     const handleTileClick = (rowIndex, colIndex) => {
         setSelectedTile({ row: rowIndex, col: colIndex });
