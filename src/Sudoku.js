@@ -127,7 +127,7 @@ function Sudoku() {
             case "reset":
                 setCount(0);
                 setGrid((grid) => {
-                    return originalPuzzle.current;  
+                    return [...puzzle.current.map(row => [...row])];  
                 });  
                 break;
             case "hint":
