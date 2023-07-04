@@ -115,7 +115,7 @@ function Sudoku() {
     function handleTool(action) {
         switch(action) {
             case "erase":
-                if(puzzle[selectedTile.row][selectedTile.col] === 0){
+                if(puzzle.current[selectedTile.row][selectedTile.col] === 0){
                     setGrid((grid) => {
                     const newGrid = [...grid];
                     newGrid[selectedTile.row][selectedTile.col] = 0;
