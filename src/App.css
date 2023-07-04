@@ -110,3 +110,22 @@
   font-size: 24px;
 
 }
+.tools {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.tool-button {
+  background-color: transparent;  /* Make the button's background transparent */
+  border: none;  /* Remove the border */
+  cursor: pointer;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.tool-image {
+  width: 50px;  /* Adjust as needed */
+  height: 50px;  /* Adjust as needed */
+}
+
