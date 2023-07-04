@@ -88,7 +88,6 @@ function Sudoku() {
     const handleButtonClick = (number) => {
         console.log("Button clicked:", number);
         console.log("Selected tile:", selectedTile);
-        // Add your logic here
     };
 
     const handleTileClick = (tile) => {
