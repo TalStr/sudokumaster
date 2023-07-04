@@ -2,6 +2,7 @@ import React, { useState, useRef} from "react";
 import Board from "./ui/Board"
 import Interface from "./ui/Interface"
 import './App.css';
+import Counter from "./ui/Counter";
 
 function getGrid() {
     let grid = [];
@@ -105,6 +106,7 @@ function Sudoku() {
 
     return (
         <div className="Sudoku">
+            <Counter/>
             <Board puzzle={puzzle.current} grid={grid} onTileClick={handleTileClick}/>
             <Interface onButtonClick={handleButtonClick}/>
         </div>
