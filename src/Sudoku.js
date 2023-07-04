@@ -85,7 +85,7 @@ function Sudoku() {
     console.log(puzzle);
     return (
         <div className="Sudoku">
-            <Board puzzle={puzzle} grid={grid}/>
+            <Board puzzle={grid} grid={grid}/>
             <Interface/>
         </div>
     );
