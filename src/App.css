@@ -84,4 +84,6 @@
   -ms-user-select: none; /* IE 10+ */
   user-select: none; /* Standard syntax */
 }
-.
+.interface-button {
+  background-color: white;
+}
