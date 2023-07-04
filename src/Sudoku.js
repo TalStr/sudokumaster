@@ -2,6 +2,7 @@ import React, { useState, useRef} from "react";
 import Board from "./ui/Board"
 import Interface from "./ui/Interface"
 
+
 function getGrid() {
     let grid = [];
     for (let i = 0; i<9; i++){
