@@ -1,4 +1,5 @@
-import React from 'react';
+const React = require('react');
+const { useState, useRef } = React;
 import Tile from './Tile'
 function Board({ puzzle, grid, onTileClick }){
     return (
