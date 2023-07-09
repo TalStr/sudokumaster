@@ -1,6 +1,6 @@
 const React = require('react');
 const { useState, useRef } = React;
-import Tile from './Tile'
+const Tile = require('./Tile')
 function Board({ puzzle, grid, onTileClick }){
     return (
 	<div className="board">
