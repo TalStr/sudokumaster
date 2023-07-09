@@ -1,4 +1,5 @@
-import React, { useState, useRef} from 'react';
+const React = require('react');
+const { useState, useRef } = React;
 import Board from "./ui/Board"
 import Interface from "./ui/Interface"
 import Toolbar from "./ui/Toolbar";
