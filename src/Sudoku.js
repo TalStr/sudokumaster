@@ -80,10 +80,17 @@ function getRandomSudoku(){
     return puzzle;
 }
 
-function isComplete(grid){
-    
+function isComplete(grid) {
+    for (let i = 0; i < grid.length; i++) {
+      for (let j = 0; j < grid[i].length; j++) {
+        if (grid[i][j] === 0) {
+          return false; // If any value is 0, return false
+        }
+      }
+    }
+    return true; // If no value is 0, return true
 }
-
+  
 function Counter({count}){
     return (
         <div className="mistake-counter">
@@ -111,6 +118,12 @@ function Sudoku() {
                 newGrid[selectedTile.row][selectedTile.col] = number;
                 return newGrid;
             });
+            if(isComplete(grid)){
+                setCount(0);
+                setGrid((grid) => {
+                    return [...originalPuzzle.current.map(row => [...row])];  
+                });  
+            }
         }
     };
     const setSelectedValue = (value) => {
