@@ -109,6 +109,14 @@ function Sudoku() {
         }
     };
 
+    const highlightRowCol = (tile) => {
+
+    };
+
+    const markTiles = (number) => {
+
+    };
+
     const handleTileClick = (tile) => {
         setSelectedTile(tile);
     };
