@@ -3,10 +3,8 @@ export const WinDialog = ({ openDialog, setOpenDialog }) => {
       <>
         {openDialog && (
           <div className="win-dialog">
-            <div className="main-container">
-              <div className="dialog-container">
-                <h3>Test</h3>
-              </div>
+            <div className="dialog-container">
+              <h3>You Win</h3>
             </div>
           </div>
         )}
