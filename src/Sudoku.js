@@ -141,7 +141,7 @@ function Sudoku() {
 
     useEffect(() => {
         if (isComplete(counters)) {
-          console.log("WIN!");
+          setOpenWinDialog(true);
         }
       }, [grid]);
     
