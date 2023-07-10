@@ -119,10 +119,7 @@ function Sudoku() {
                 return newGrid;
             });
             if(isComplete(grid)){
-                setCount(0);
-                setGrid((grid) => {
-                    return [...originalPuzzle.current.map(row => [...row])];  
-                });  
+                console.log("WIN!");
             }
         }
     };
