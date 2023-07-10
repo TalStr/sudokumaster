@@ -235,6 +235,8 @@ function Sudoku() {
             {openWinDialog && <WinDialog
                 openDialog={openWinDialog}
                 setOpenDialog={setOpenWinDialog}
+                time={seconds}
+                newGame={newGame}
                 />}
         </div>
     );
