@@ -109,6 +109,7 @@ function Sudoku() {
     const [grid, setGrid] = useState(puzzle.current); // current game board
     const [count, setCount] = useState(0); // Move count state to Sudoku
     const [selectedTile, setSelectedTile] = useState({ row: 0, col: 0, value: grid[0][0] });
+    const [counters, setCounters] = useState(Array(9).fill(0));
 
     useEffect(() => {
         if (isComplete(puzzle.current)) {
