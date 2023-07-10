@@ -149,6 +149,7 @@ function Sudoku() {
                 grid={grid} 
                 setSelectedTile={setSelectedTile}
                 selectedTile={selectedTile}
+                selectedValue={selectedValue}
                 />
             <Toolbar handleTool={handleTool}/>
             <Interface onButtonClick={handleButtonClick} setSelectedValue={setSelectedValue}/>
