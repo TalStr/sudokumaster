@@ -109,15 +109,6 @@ function Sudoku() {
             });
         }
     };
-
-    const highlightRowCol = (tile) => {
-
-    };
-
-    const markTiles = (number) => {
-
-    };
-
     function handleTool(action) {
         switch(action) {
             case "erase":
@@ -138,6 +129,8 @@ function Sudoku() {
             case "hint":
                 console.log("hint");
                 break;
+            default:
+                console.log("Error");
         }
     }
 
