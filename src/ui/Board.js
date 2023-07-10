@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Tile from './Tile'
 
-function Board({ puzzle, grid, setSelectedTile, selectedTile }){
+function Board({ puzzle, grid, setSelectedTile, selectedTile, selectedValue }){
 	const handleTileClick = (row, col) => {
 		setSelectedTile({ row, col, value: grid[row][col] });
 	  };
