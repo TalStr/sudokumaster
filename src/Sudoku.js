@@ -93,7 +93,6 @@ function Sudoku() {
     const puzzle = useRef(createPuzzle()); // original puzzle
     const originalPuzzle = useRef([...puzzle.current.map(row => [...row])]);  // Deep copy of original puzzle
     const [grid, setGrid] = useState(puzzle.current); // current game board
-    const [selectedTile, setSelectedTile] = useState({ row: 0, col: 0 });
     const [count, setCount] = useState(0); // Move count state to Sudoku
 
     const handleButtonClick = (number) => {
@@ -115,10 +114,6 @@ function Sudoku() {
 
     const markTiles = (number) => {
 
-    };
-
-    const handleTileClick = (tile) => {
-        setSelectedTile(tile);
     };
 
     function handleTool(action) {
@@ -147,7 +142,7 @@ function Sudoku() {
     return (
         <div className="Sudoku">
             <Counter count={count}/>
-            <Board puzzle={originalPuzzle.current} grid={grid} onTileClick={handleTileClick}/>
+            <Board puzzle={originalPuzzle.current} grid={grid}/>
             <Toolbar handleTool={handleTool}/>
             <Interface onButtonClick={handleButtonClick}/>
         </div>
