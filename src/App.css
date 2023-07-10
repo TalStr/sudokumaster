@@ -50,10 +50,11 @@
   font-size: 32px;
   outline: none;
   background-color: white;
-  border: 2px solid black;
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
   margin-left: -1px;
   margin-right: -1px;
-  box-sizing: border-box;
   cursor: default;
 }
 .taken {
