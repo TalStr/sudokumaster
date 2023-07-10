@@ -136,7 +136,7 @@ function Sudoku() {
     };    
 
     useEffect(() => {
-        if (isComplete(puzzle.current)) {
+        if (isComplete(counters)) {
           console.log("WIN!");
         }
       }, [grid]);
