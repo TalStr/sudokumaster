@@ -4,6 +4,7 @@ import Interface from "./ui/Interface"
 import Toolbar from "./ui/Toolbar";
 import Timer from "./ui/Timer";
 import './App.css';
+import { WinDialog } from './ui/WinDialog';
 
 
 const diff = 0.95;
@@ -121,6 +122,7 @@ function Sudoku() {
     const [selectedTile, setSelectedTile] = useState({ row: 0, col: 0, value: grid[0][0] });
     const [counters, setCounters] = useState(getCount(grid));
     const [seconds, setSeconds] = useState(0);
+    const [openWinDialog, setOpenWinDialog] = useState(false);
 
     const incrementCounter = (index) => {
         setCounters((prevCounters) => {
@@ -205,6 +207,10 @@ function Sudoku() {
                 onButtonClick={handleButtonClick} 
                 setSelectedValue={setSelectedValue}
                 counters={counters}
+                />
+            <WinDialog
+                openDialog={openWinDialog}
+                setOpenWinDialog={setOpenWinDialog}
                 />
         </div>
     );
