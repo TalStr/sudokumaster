@@ -119,6 +119,7 @@ function Sudoku() {
     const [count, setCount] = useState(0); // Move count state to Sudoku
     const [selectedTile, setSelectedTile] = useState({ row: 0, col: 0, value: grid[0][0] });
     const [counters, setCounters] = useState(getCount(grid));
+    const [seconds, setSeconds] = useState(0);
 
     const incrementCounter = (index) => {
         setCounters((prevCounters) => {
@@ -188,6 +189,7 @@ function Sudoku() {
 
     return (
         <div className="Sudoku">
+            <Timer/>
             <Counter count={count}/>
             <Board 
                 puzzle={originalPuzzle.current} 
