@@ -81,6 +81,12 @@
 .selected {
   background-color: #86C5D8;
 }
+.same-value {
+  background-color: #AFDCEB; /* Or whatever color you want */
+}
+.same-row-col {
+  background-color: #D1FAFF;
+}
 .tile, .initial, .taken, .selected, div {
   -webkit-user-select: none; /* Safari 3.1+ */
   -moz-user-select: none; /* Firefox 2+ */
@@ -130,11 +136,5 @@
 .tool-image {
   width: 50px;  /* Adjust as needed */
   height: 50px;  /* Adjust as needed */
-}
-.tile.same-value {
-  background-color: #AFDCEB; /* Or whatever color you want */
-}
-.same-row-col {
-  background-color: #D1FAFF;
 }
 
