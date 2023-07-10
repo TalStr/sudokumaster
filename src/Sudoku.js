@@ -125,7 +125,20 @@ function Sudoku() {
     const [openWinDialog, setOpenWinDialog] = useState(false);
 
     const newGame = () => {
-
+        const newPuzzle = createPuzzle(); // Generate a new puzzle
+        const newOriginalPuzzle = [...newPuzzle.map(row => [...row])]; // Deep copy of the new puzzle
+      
+        setGrid(newPuzzle.current); // Set the new puzzle as the current game board
+        setCount(0); // Reset the move count
+        setSelectedTile({ row: 0, col: 0, value: newPuzzle[0][0] }); // Reset the selected tile
+      
+        // Reset the counters
+        const newCounters = getCount(newPuzzle);
+        setCounters(newCounters);
+      
+        setSeconds(0); // Reset the timer
+        setOpenWinDialog(false); // Close the win dialog if it's open
+      
     };
 
 
