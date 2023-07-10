@@ -1,8 +1,8 @@
 import React from 'react';
 
 function Tile({ value, isInitial, isSelected, onClick, selectedValue, selectedTile, row, col }) {
-    const isSameRowOrCol = (selectedTile.row === row || selectedTile.col === col);
-    
+    const isSameRowOrCol = selectedTile && (selectedTile.row === row || selectedTile.col === col);
+
     return (
         <div 
             className={
