@@ -94,8 +94,8 @@ function Sudoku() {
     const originalPuzzle = useRef([...puzzle.current.map(row => [...row])]);  // Deep copy of original puzzle
     const [grid, setGrid] = useState(puzzle.current); // current game board
     const [count, setCount] = useState(0); // Move count state to Sudoku
-    const [selectedTile, setSelectedTile] = useState({ row: 0, col: 0, value: null });
-    const [selectedValue, setSelectedValue] = useState(null);  
+    const [selectedTile, setSelectedTile] = useState({ row: 0, col: 0, value: grid[0][0] });
+    const [selectedValue, setSelectedValue] = useState(grid[0][0]);  
 
     const handleButtonClick = (number) => {
         if(!isValidPlace(grid, selectedTile.row, selectedTile.col, number)){
