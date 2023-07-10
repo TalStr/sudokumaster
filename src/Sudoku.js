@@ -210,7 +210,7 @@ function Sudoku() {
                 />
             <button
                 onClick={() => {
-                    
+                    setOpenWinDialog(true);
                 }}
                 />
             <WinDialog
