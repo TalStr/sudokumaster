@@ -2,7 +2,9 @@ import React from 'react';
 
 function Tile({ value, isInitial, isSelected, onClick, selectedValue, selectedTile, row, col }) {
     const isSameRowOrCol = selectedTile && (selectedTile.row === row || selectedTile.col === col);
-    const isThickRightBorder = col === 2 || col === 4 || col === 6;
+    const isThickRightBorder = (col === 2 || col === 5 || col === 8);
+    const isThickLeftBorder = (col == 0);
+
     return (
         <div 
             className={
