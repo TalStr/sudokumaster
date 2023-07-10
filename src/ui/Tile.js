@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Tile({ value, isInitial, isSelected, onClick, selectedValue, selectedTile, row, col }) {
-
+    console.log(row + ", " + col);
     return (
         <div 
             className={
