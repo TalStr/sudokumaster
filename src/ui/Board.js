@@ -1,4 +1,4 @@
-import React, {userState, useRef} from 'react';
+import React, {useState} from 'react';
 import Tile from './Tile'
 function Board({ puzzle, grid, onTileClick }){
 	const [selectedTile, setSelectedTile] = useState({ row: 0, col: 0 });
