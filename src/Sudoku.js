@@ -141,6 +141,7 @@ function Sudoku() {
                         newGrid[selectedTile.row][selectedTile.col] = 0;
                         return newGrid;    
                     });
+                    setSelectedValue(0);
                 }
                 break;
             case "reset":
