@@ -80,6 +80,10 @@ function getRandomSudoku(){
     return puzzle;
 }
 
+function isComplete(grid){
+    
+}
+
 function Counter({count}){
     return (
         <div className="mistake-counter">
