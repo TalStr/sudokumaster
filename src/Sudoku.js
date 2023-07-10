@@ -121,7 +121,7 @@ function Sudoku() {
                 newGrid[selectedTile.row][selectedTile.col] = number;
                 return newGrid;
             });
-            if(isComplete(grid)){
+            if(isComplete(puzzle.current)){
                 console.log("WIN!");
             }
         }
