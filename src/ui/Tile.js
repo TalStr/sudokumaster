@@ -1,35 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-function Tile({ puzzle, grid, onTileClick }) {
-    const [selectedTile, setSelectedTile] = useState({ row: 0, col: 0 });
+function Tile({ value, isInitial, isSelected, onClick, selectedValue }) {
+    let className = "tile";
+    if(isSelected) className += " selected";
+    else if(isInitial) className += " initial";
+    else if(value !== 0 && value === selectedValue) className += " same-value";
+    else if(value !== 0) className += " taken";
 
-    const handleTileClick = (rowIndex, colIndex) => {
-        setSelectedTile({ row: rowIndex, col: colIndex });
-        onTileClick({ row: rowIndex, col: colIndex });
-    };
-
-    return grid.map((row, rowIndex) => {
-        return row.map((col, colIndex) => {
-            const isSelected = rowIndex === selectedTile.row && colIndex === selectedTile.col;
-            return (
-                <div 
-                    className={
-                        isSelected 
-                            ? "tile selected" 
-                            : puzzle[rowIndex][colIndex] !== 0 
-                                ? "initial" 
-                                : col !== 0 
-                                    ? "tile taken"
-                                    : "tile"
-                    }
-                    onClick={() => handleTileClick(rowIndex, colIndex)}
-                    key={rowIndex + " " + colIndex}
-                >
-                    {grid[rowIndex][colIndex] !== 0 ? grid[rowIndex][colIndex] : ""}
-                </div>
-            );
-        });
-    });
-} 
+    return (
+        <div 
+            className={className}
+            onClick={onClick}
+        >
+            {value !== 0 ? value : ""}
+        </div>
+    );
+}
 
 export default Tile;
