@@ -53,6 +53,7 @@
   border: 2px solid black;
   margin-left: -1px;
   margin-right: -1px;
+  box-sizing: border-box;
   cursor: default;
 }
 .taken {
