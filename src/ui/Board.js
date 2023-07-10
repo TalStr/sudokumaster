@@ -19,7 +19,6 @@ function Board({ puzzle, grid, setSelectedTile, selectedTile }){
                         isInitial={isInitial}
                         isSelected={isSelected}
                         onClick={() => handleTileClick(rowIndex, colIndex)}
-                        selectedValue={selectedTile.value}
 						selectedTile={selectedTile}
 						row={rowIndex}
 						col={colIndex}					  
