@@ -83,6 +83,20 @@ function getRandomSudoku(){
     return puzzle;
 }
 
+function getCount(grid){
+    let counters = Array(9).fill(0);
+    for (let i = 0; i < grid.length; i++) {
+        for (let j = 0; j < grid[i].length; j++) {
+          if (grid[i][j] !== 0) {
+            counters[grid[i][j]-1] += 1;
+          }
+        }
+      }
+      console.log(counters);
+      return counters;
+  
+}
+
 function isComplete(grid) {
     for (let i = 0; i < grid.length; i++) {
       for (let j = 0; j < grid[i].length; j++) {
@@ -109,7 +123,7 @@ function Sudoku() {
     const [grid, setGrid] = useState(puzzle.current); // current game board
     const [count, setCount] = useState(0); // Move count state to Sudoku
     const [selectedTile, setSelectedTile] = useState({ row: 0, col: 0, value: grid[0][0] });
-    const [counters, setCounters] = useState(Array(9).fill(0));
+    const [counters, setCounters] = useState(getCount(grid));
 
     const incrementCounter = (index) => {
         setCounters((prevCounters) => {
@@ -188,7 +202,11 @@ function Sudoku() {
                 selectedTile={selectedTile}
                 />
             <Toolbar handleTool={handleTool}/>
-            <Interface onButtonClick={handleButtonClick} setSelectedValue={setSelectedValue}/>
+            <Interface 
+                onButtonClick={handleButtonClick} 
+                setSelectedValue={setSelectedValue}
+                counters={counters}
+                />
         </div>
     );
 }
