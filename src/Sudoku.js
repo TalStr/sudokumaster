@@ -124,6 +124,11 @@ function Sudoku() {
     const [seconds, setSeconds] = useState(0);
     const [openWinDialog, setOpenWinDialog] = useState(false);
 
+    const newGame = () => {
+
+    };
+
+
     const incrementCounter = (index) => {
         setCounters((prevCounters) => {
           const newCounters = [...prevCounters];
@@ -138,6 +143,7 @@ function Sudoku() {
           return newCounters;
         });
     };    
+
 
     useEffect(() => {
         if (isComplete(counters)) {
