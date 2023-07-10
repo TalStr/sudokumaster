@@ -47,7 +47,7 @@
   width: 75px;
   height: 75px;
   text-align: center;
-  font-size: 32px;
+  font-size: 40px; /* Increased font size */
   outline: none;
   background-color: white;
   border-width: 2px;
@@ -56,6 +56,9 @@
   margin-left: -1px;
   margin-right: -1px;
   cursor: default;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .taken {
   color: #5982D8;
