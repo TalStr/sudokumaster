@@ -20,6 +20,7 @@ function Board({ puzzle, grid, setSelectedTile, selectedTile, selectedValue }){
                         isSelected={isSelected}
                         onClick={() => handleTileClick(rowIndex, colIndex)}
                         selectedValue={selectedTile.value}
+						selectedTile={selectedTile}
 						row={rowIndex}
 						col={colIndex}					  
                     />
