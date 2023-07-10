@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 
 const Timer = ({ seconds, setSeconds }) => {
   useEffect(() => {
@@ -13,7 +13,7 @@ const Timer = ({ seconds, setSeconds }) => {
 
   return (
     <div className='timer'>
-      {seconds}
+      {(seconds/60) + ":" + (seconds%60)}
     </div>
   );
 }
