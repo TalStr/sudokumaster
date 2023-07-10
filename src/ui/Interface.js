@@ -9,7 +9,7 @@ function Interface({ onButtonClick, setSelectedValue, counters }) {
                         onButtonClick(number);
                     }}
                     style= {{
-                        
+                        visibility: (counters[number-1] < 9)?
                     }}
                 >
                     {number}
