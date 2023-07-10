@@ -5,7 +5,7 @@ import Toolbar from "./ui/Toolbar";
 import './App.css';
 
 
-const diff = 0.85;
+const diff = 0.9;
 
 function getGrid() {
     let grid = [];
@@ -121,10 +121,12 @@ function Sudoku() {
                 newGrid[selectedTile.row][selectedTile.col] = number;
                 return newGrid;
             });
-            if(isComplete(puzzle.current)){
-                console.log("WIN!");
-            }
         }
+        if(isComplete(puzzle.current)){
+            console.log("WIN!");
+        }
+        else
+            console.log("Weird");
     };
     const setSelectedValue = (value) => {
         setSelectedTile({ row: selectedTile.row, col: selectedTile.col, value: value });
