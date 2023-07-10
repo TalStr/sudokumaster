@@ -148,7 +148,7 @@ function Sudoku() {
                 puzzle={originalPuzzle.current} 
                 grid={grid} 
                 setSelectedTile={setSelectedTile}
-                setSelectedValue={setSelectedValue}
+                selectedTile={selectedTile}
                 />
             <Toolbar handleTool={handleTool}/>
             <Interface onButtonClick={handleButtonClick} setSelectedValue={setSelectedValue}/>
