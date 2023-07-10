@@ -12,7 +12,6 @@ function Board({ puzzle, grid, setSelectedTile, selectedTile }){
                 return row.map((col, colIndex) => {
                     const isInitial = puzzle[rowIndex][colIndex] !== 0;
                     const isSelected = rowIndex === selectedTile.row && colIndex === selectedTile.col;
-                    const selectedValue = selectedTile.value;
 
                     return <Tile 
                         key={`${rowIndex}-${colIndex}`}
@@ -20,7 +19,7 @@ function Board({ puzzle, grid, setSelectedTile, selectedTile }){
                         isInitial={isInitial}
                         isSelected={isSelected}
                         onClick={() => handleTileClick(rowIndex, colIndex)}
-                        selectedValue={selectedValue}
+                        selectedValue={selectedTile.value}
 						row={rowIndex}
 						col={colIndex}					  
                     />
