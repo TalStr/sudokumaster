@@ -130,6 +130,7 @@ function Sudoku() {
         if (isComplete(puzzle.current)) {
           console.log("WIN!");
         }
+        console.log(counters);
       }, [grid]);
     
 
@@ -145,7 +146,6 @@ function Sudoku() {
             });
             incrementCounter(number-1);
         }
-        console.log(counters);
     };
     const setSelectedValue = (value) => {
         setSelectedTile({ row: selectedTile.row, col: selectedTile.col, value: value });
