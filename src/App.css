@@ -131,7 +131,7 @@
 .tile.same-value {
   background-color: yellow; /* Or whatever color you want */
 }
-.tile.same-row-col {
+.same-row-col {
   background-color: lightblue;
 }
 
