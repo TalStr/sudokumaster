@@ -2,8 +2,10 @@ import React from 'react'
 
 export const WinDialog = ({ openDialog, setOpenDialog}) => {
   return <>
-    <div className="dialog-container">
-        <
+    <div className="main-container">
+        <div className='dialog-container'>
+
+        </div>
     </div>
   </>;
 }
