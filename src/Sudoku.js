@@ -92,20 +92,15 @@ function getCount(grid){
           }
         }
       }
-      console.log(counters);
       return counters;
   
 }
 
-function isComplete(grid) {
-    for (let i = 0; i < grid.length; i++) {
-      for (let j = 0; j < grid[i].length; j++) {
-        if (grid[i][j] === 0) {
-          return false; // If any value is 0, return false
-        }
-      }
-    }
-    return true; // If no value is 0, return true
+function isComplete(counters) {
+    for (let i = 0; i < 9; i++)
+        if (counters[i] < 9)
+            return false;
+    return true;
 }
   
 function Counter({count}){
@@ -144,7 +139,6 @@ function Sudoku() {
         if (isComplete(puzzle.current)) {
           console.log("WIN!");
         }
-        console.log(counters);
       }, [grid]);
     
 
