@@ -4,6 +4,9 @@ import Interface from "./ui/Interface"
 import Toolbar from "./ui/Toolbar";
 import './App.css';
 
+
+const diff = 0.85;
+
 function getGrid() {
     let grid = [];
     for (let i = 0; i<9; i++){
@@ -60,7 +63,7 @@ function createPuzzle(){
     solve(puzzle);
     for(let i = 0; i < 9; i++) {
         for(let j = 0; j < 9; j++) {
-            if(Math.random() > 0.7){
+            if(Math.random() > diff){
                 puzzle[i][j] = 0;
             }
         }
