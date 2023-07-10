@@ -145,6 +145,7 @@ function Sudoku() {
             });
             incrementCounter(number-1);
         }
+        console.log(counters);
     };
     const setSelectedValue = (value) => {
         setSelectedTile({ row: selectedTile.row, col: selectedTile.col, value: value });
