@@ -1,4 +1,4 @@
-export const WinDialog = ({ openDialog, setOpenDialog }) => {
+export const WinDialog = ({ openDialog, setOpenDialog, time }) => {
     return (
       <>
         {openDialog && (
