@@ -213,10 +213,10 @@ function Sudoku() {
                     setOpenWinDialog(true);
                 }}
                 />
-            <WinDialog
+            {openWinDialog && <WinDialog
                 openDialog={openWinDialog}
                 setOpenDialog={setOpenWinDialog}
-                />
+                />}
         </div>
     );
 }
