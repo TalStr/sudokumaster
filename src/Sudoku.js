@@ -95,7 +95,7 @@ function Sudoku() {
     const [grid, setGrid] = useState(puzzle.current); // current game board
     const [count, setCount] = useState(0); // Move count state to Sudoku
     const [selectedTile, setSelectedTile] = useState({ row: 0, col: 0, value: grid[0][0] });
-    const [selectedValue, setSelectedValue] = useState(grid[0][0]);  
+    // const [selectedValue, setSelectedValue] = useState(grid[0][0]);  
 
     const handleButtonClick = (number) => {
         if(!isValidPlace(grid, selectedTile.row, selectedTile.col, number)){
@@ -109,6 +109,9 @@ function Sudoku() {
             });
         }
     };
+    const setSelectedValue = (value) => {
+        setSelectedTile({ row: selectedTile.row, col: selectedTile.col, value: value });
+    }
     function handleTool(action) {
         switch(action) {
             case "erase":
@@ -142,7 +145,6 @@ function Sudoku() {
                 grid={grid} 
                 setSelectedTile={setSelectedTile}
                 selectedTile={selectedTile}
-                selectedValue={selectedValue}
                 />
             <Toolbar handleTool={handleTool}/>
             <Interface onButtonClick={handleButtonClick} setSelectedValue={setSelectedValue}/>
