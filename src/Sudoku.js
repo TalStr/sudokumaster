@@ -190,7 +190,9 @@ function Sudoku() {
 
     return (
         <div className="Sudoku">
-            <Timer/>
+            <Timer
+                seconds={seconds}
+                setSeconds={setSeconds}/>
             <Counter count={count}/>
             <Board 
                 puzzle={originalPuzzle.current} 
