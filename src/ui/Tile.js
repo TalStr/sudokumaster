@@ -1,20 +1,18 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 
-function Tile({ value, isInitial, isSelected, onClick, selectedValue, row, col }) {
-    let className = "tile";
-    if(isSelected) className += " selected";
-    else if(isInitial) className += " initial";
-    else if(value !== 0 && value === selectedValue) className += " same-value";
-    else if(value !== 0) className += " taken";
-
-    // Use effect to track changes in selectedValue
-    React.useEffect(() => {
-        if(value !== 0 && value === selectedValue) className += " same-value";
-    }, [selectedValue]);
-
+function Tile({ value, isInitial, isSelected, onClick, selectedValue, selectedTile, row, col }) {
+    const isSameRowOrCol = (selectedTile.row === row || selectedTile.col === col);
+    
     return (
         <div 
-            className={className}
+            className={
+                "tile" +
+                (isSelected ? " selected" : "") +
+                (isInitial ? " initial" : "") +
+                (value !== 0 && value === selectedValue ? " same-value" : "") +
+                (value !== 0 ? " taken" : "") +
+                (isSameRowOrCol && !isSelected ? " same-row-col" : "")
+            }
             onClick={onClick}
         >
             {value !== 0 ? value : ""}
