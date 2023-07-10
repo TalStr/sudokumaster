@@ -155,4 +155,4 @@ function Sudoku() {
         </div>
     );
 }
-export default Sudoku
+export default Sudoku;
