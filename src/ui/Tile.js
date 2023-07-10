@@ -20,7 +20,7 @@ function Tile({ value, isInitial, isSelected, onClick, selectedValue, selectedTi
                 (isSameRowOrCol && !isSelected ? " same-row-col" : "")
             }
             style={{
-                borderBottomWidth: (row == 8) ? '4px' : '2px',
+                borderBottomWidth: (row == 8) ? '4px' : '4px',
                 borderRightWidth: (col === 8) ? '4px' : '2px',
                 borderLeftWidth: (col % 3 == 0) ? '4px' : '2px',
                 borderTopWidth: (row % 3 == 0) ? '4px' : '2px',
