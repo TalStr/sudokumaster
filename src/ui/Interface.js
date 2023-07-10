@@ -10,7 +10,7 @@ function Interface({ onButtonClick, setSelectedValue, counters }) {
                     }}
                     style= {{
                         visibility: (counters[number-1] < 9)? 'visible': 'hidden',
-                        pointerEvents: (counters[number-1] < 9)? 'none': 'auto',
+                        pointerEvents: (counters[number-1] < 9)? 'auto': 'none',
                     }}
                 >
                     {number}
