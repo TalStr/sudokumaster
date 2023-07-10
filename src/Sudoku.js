@@ -1,11 +1,11 @@
-import React, { useState, useRef} from 'react';
+import React, { useState, useRef, useEffect} from 'react';
 import Board from "./ui/Board"
 import Interface from "./ui/Interface"
 import Toolbar from "./ui/Toolbar";
 import './App.css';
 
 
-const diff = 0.9;
+const diff = 0.95;
 
 function getGrid() {
     let grid = [];
@@ -110,7 +110,15 @@ function Sudoku() {
     const [grid, setGrid] = useState(puzzle.current); // current game board
     const [count, setCount] = useState(0); // Move count state to Sudoku
     const [selectedTile, setSelectedTile] = useState({ row: 0, col: 0, value: grid[0][0] });
-    // const [selectedValue, setSelectedValue] = useState(grid[0][0]);  
+
+    useEffect(() => {
+        if (isComplete(puzzle.current)) {
+          console.log("WIN!");
+        } else {
+          console.log("Not yet complete");
+        }
+      }, [grid]);
+    
 
     const handleButtonClick = (number) => {
         if(!isValidPlace(grid, selectedTile.row, selectedTile.col, number)){
@@ -123,11 +131,6 @@ function Sudoku() {
                 return newGrid;
             });
         }
-        if(isComplete(puzzle.current)){
-            console.log("WIN!");
-        }
-        else
-            console.log("Weird");
     };
     const setSelectedValue = (value) => {
         setSelectedTile({ row: selectedTile.row, col: selectedTile.col, value: value });
