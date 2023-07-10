@@ -17,7 +17,6 @@ function Tile({ value, isInitial, isSelected, onClick, selectedTile, row, col })
                 borderRightWidth: (col === 8) ? '6px' : '2px',
                 borderLeftWidth: (col % 3 === 0) ? '6px' : '2px',
                 borderTopWidth: (row % 3 === 0) ? '4px' : '2px',
-
             }}
             onClick={onClick}
         >
