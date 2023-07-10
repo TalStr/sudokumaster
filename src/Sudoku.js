@@ -84,7 +84,6 @@ function getRandomSudoku(){
 }
 
 function isComplete(grid) {
-    console.log(grid.map(row => row.join(' ')).join('\n'));
     for (let i = 0; i < grid.length; i++) {
       for (let j = 0; j < grid[i].length; j++) {
         if (grid[i][j] === 0) {
@@ -114,8 +113,6 @@ function Sudoku() {
     useEffect(() => {
         if (isComplete(puzzle.current)) {
           console.log("WIN!");
-        } else {
-          console.log("Not yet complete");
         }
       }, [grid]);
     
