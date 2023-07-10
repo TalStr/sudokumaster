@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import Tile from './Tile'
 
 function Board({ puzzle, grid, setSelectedTile, setSelectedValue }){
-    const [selectedTile, setSelectedTile] = useState({ row: 0, col: 0 });
-
 	const handleTileClick = (row, col) => {
 		setSelectedTile({ row, col, value: grid[row][col] });
 		setSelectedValue(grid[row][col]);
