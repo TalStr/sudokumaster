@@ -1,4 +1,4 @@
-export const WinDialog = ({ openDialog, setOpenDialog, time }) => {
+export const WinDialog = ({ openDialog, setOpenDialog, time, newGame }) => {
     return (
       <>
         {openDialog && (
@@ -6,9 +6,7 @@ export const WinDialog = ({ openDialog, setOpenDialog, time }) => {
             <div className="dialog-container">
               <h3>You Win</h3>
               <button
-                onClick={() =>{
-                    
-                }}
+                onClick={newGame}
                 >next</button>
             </div>
           </div>
