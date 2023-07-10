@@ -13,7 +13,7 @@ const Timer = ({ seconds, setSeconds }) => {
 
   return (
     <div className='timer'>
-      {(seconds/60) + ":" + (seconds%60)}
+      {Math.floor(seconds / 60) + ":" + (seconds%60)}
     </div>
   );
 }
