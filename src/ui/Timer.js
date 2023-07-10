@@ -13,3 +13,5 @@ const Timer = ({ seconds, setSeconds}) => {
         </div>
     );
 }
+
+export default Timer;
