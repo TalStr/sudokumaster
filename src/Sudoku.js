@@ -111,6 +111,21 @@ function Sudoku() {
     const [selectedTile, setSelectedTile] = useState({ row: 0, col: 0, value: grid[0][0] });
     const [counters, setCounters] = useState(Array(9).fill(0));
 
+    const incrementCounter = (index) => {
+        setCounters((prevCounters) => {
+          const newCounters = [...prevCounters];
+          newCounters[index] += 1;
+          return newCounters;
+        });
+    };    
+    const decrementCounter = (index) => {
+        setCounters((prevCounters) => {
+          const newCounters = [...prevCounters];
+          newCounters[index] -= 1;
+          return newCounters;
+        });
+    };    
+
     useEffect(() => {
         if (isComplete(puzzle.current)) {
           console.log("WIN!");
@@ -128,6 +143,7 @@ function Sudoku() {
                 newGrid[selectedTile.row][selectedTile.col] = number;
                 return newGrid;
             });
+            incrementCounter(number-1);
         }
     };
     const setSelectedValue = (value) => {
@@ -142,6 +158,8 @@ function Sudoku() {
                         newGrid[selectedTile.row][selectedTile.col] = 0;
                         return newGrid;    
                     });
+                    if(selectedTile.value > 0)
+                        decrementCounter(selectedTile.value - 1);
                     setSelectedValue(0);
                 }
                 break;
