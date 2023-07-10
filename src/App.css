@@ -76,7 +76,7 @@
   padding: 20px;
 }
 .selected {
-  background-color: lightblue;
+  background-color: #86C5D8;
 }
 .tile, .initial, .taken, .selected, div {
   -webkit-user-select: none; /* Safari 3.1+ */
