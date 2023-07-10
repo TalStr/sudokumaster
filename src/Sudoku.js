@@ -146,7 +146,7 @@ function Sudoku() {
             <Counter count={count}/>
             <Board puzzle={originalPuzzle.current} grid={grid}/>
             <Toolbar handleTool={handleTool}/>
-            <Interface onButtonClick={handleButtonClick}/>
+            <Interface onButtonClick={handleButtonClick} setSelectedValue={setSelectedValue}/>
         </div>
     );
 }
