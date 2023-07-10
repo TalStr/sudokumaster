@@ -129,9 +129,9 @@
   height: 50px;  /* Adjust as needed */
 }
 .tile.same-value {
-  background-color: #ADD8E6; /* Or whatever color you want */
+  background-color: #AFDCEB; /* Or whatever color you want */
 }
 .same-row-col {
-  background-color: #F0F8FF;
+  background-color: #D1FAFF;
 }
 
