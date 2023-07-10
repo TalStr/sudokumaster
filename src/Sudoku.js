@@ -60,7 +60,7 @@ function createPuzzle(){
     solve(puzzle);
     for(let i = 0; i < 9; i++) {
         for(let j = 0; j < 9; j++) {
-            if(Math.random() > 0.3){
+            if(Math.random() > 0.7){
                 puzzle[i][j] = 0;
             }
         }
