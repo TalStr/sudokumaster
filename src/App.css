@@ -128,4 +128,7 @@
   width: 50px;  /* Adjust as needed */
   height: 50px;  /* Adjust as needed */
 }
+.tile.same-value {
+  background-color: yellow; /* Or whatever color you want */
+}
 
