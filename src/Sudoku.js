@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect} from 'react';
 import Board from "./ui/Board"
 import Interface from "./ui/Interface"
 import Toolbar from "./ui/Toolbar";
+import Timer from "./ui/Timer";
 import './App.css';
 
 
