@@ -3,7 +3,7 @@ import Tile from './Tile'
 
 function Board({ puzzle, grid, setSelectedTile, selectedTile, selectedValue }){
 	const handleTileClick = (row, col) => {
-		setSelectedTile({ row, col, value: grid[row][col] });
+		setSelectedTile({ row: row, col: col, value: grid[row][col] });
 	  };
 	
     return (
