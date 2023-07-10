@@ -227,11 +227,6 @@ function Sudoku() {
                 setSelectedValue={setSelectedValue}
                 counters={counters}
                 />
-            <button
-                onClick={() => {
-                    setOpenWinDialog(true);
-                }}
-                />
             {openWinDialog && <WinDialog
                 openDialog={openWinDialog}
                 setOpenDialog={setOpenWinDialog}
