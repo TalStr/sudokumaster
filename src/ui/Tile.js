@@ -11,7 +11,8 @@ function Tile({ value, isInitial, isSelected, onClick, selectedValue, selectedTi
                 (isInitial ? " initial" : "") +
                 (value !== 0 && !isSelected && value === selectedValue ? " same-value" : "") +
                 (value !== 0 ? " taken" : "") +
-                (isSameRowOrCol && !isSelected ? " same-row-col" : "")
+                (isSameRowOrCol && !isSelected ? " same-row-col" : "") +
+                (isThickRightBorder ? " thick-right-border" : "")
             }
             onClick={onClick}
         >
